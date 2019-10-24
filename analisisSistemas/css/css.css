@@ -1,0 +1,31 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-login {
+    padding-top: 50px;
+    width: 33%;
+}
+
+.container-index {
+    padding-top: 20px;
+    margin-left: 15%;
+    width: 65%;
+    padding-bottom: 20px;
+}
+
+.image-login {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+footer {
+    position: fixed;
+    height: 55px;
+    bottom: 0;
+    width: 100%;
+    background-color: #DFDFDF;
+    text-align: center;
+}
