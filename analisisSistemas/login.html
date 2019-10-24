@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/css.css">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Default form login -->
+    <div class="container container-login">
+        <form class="text-center border border-light p-5 " action="#!">
+            <img class="image-login" src="img/UNLZ.jpg" alt="UNLZ">
+            </br>
+            <p class="h4 mb-4">Iniciar Sesion</p>
+
+            <!-- Email -->
+            <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+            <!-- Password -->
+            <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+
+            <div class="d-flex justify-content-around">
+                <div>
+                    <!-- Remember me -->
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                        <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+                    </div>
+                </div>
+
+                <div>
+                    <!-- Forgot password -->
+                    <a data-toggle="modal" data-target="#forgotPassModal" href="">Olvidaste la Contraseña?</a>
+                </div>
+            </div>
+
+            <!-- Sign in button -->
+            <a href="./index.html"><input type="button" class="btn btn-info btn-block my-4" value="Iniciar Sesion"></a>
+
+            <!-- Register -->
+            <p>No eres miembro?
+                <a class="" data-toggle="modal" data-target="#registracionModal" href="">Registrate</a>
+            </p>
+            <div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="defaultLoginFormGuest">
+                    <label class="custom-control-label" for="defaultLoginFormGuest">Ingresar Como Invitado</label>
+                </div>
+            </div>
+        </form>
+        <!-- Default form login -->
+    </div>
+
+    <!-- The Modal Registracion-->
+    <div class="modal fade" id="registracionModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Modal body..
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal Olvidar PassWord-->
+    <div class="modal fade" id="forgotPassModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Modal body..
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
