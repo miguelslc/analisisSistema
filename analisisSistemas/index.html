@@ -20,26 +20,27 @@
         <p>Cerrar Sesion</p>
     </a>
     <!-- Nav tabs -->
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs" id="myTab">
         <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#home">Inicio</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#menu1">Compra</a>
+            <a class="nav-link" data-toggle="tab" id="compraTab" href="#menu1">Compra</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#menu2">Contacto</a>
+            <a class="nav-link" data-toggle="tab" id="contactoTab" href="#menu2">Contacto</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#menu3">Productos</a>
+            <a class="nav-link" data-toggle="tab" id="productosTab" href="#menu3">Productos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#menu4">Despacho</a>
+            <a class="nav-link" data-toggle="tab" id="despachoTab" href="#menu4">Despacho</a>
         </li>
         <li class="nav-item">
             <a class="nav-link disabled" tabindex="-1" aria-disabled="true" data-toggle="tab" href="#menu5">Administracion</a>
         </li>
     </ul>
+
     <div class="tab-content">
         <div id="home" class="tab-pane active">
             <h3>HOME</h3>
@@ -73,7 +74,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="inputState">Producto</label>
-                        <select name="name[]" class="form-control" id="nombreProducto">
+                        <select name="name[]" class="form-control form-control-sm" id="nombreProducto">
                             <option selected>Choose...</option>
                             <option>Lavarropas</option>
                             <option>Heladera</option>
@@ -84,7 +85,7 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputState">Marca</label>
-                        <select name="name[]" class="form-control">
+                        <select name="name[]" class="form-control form-control-sm">
                             <option selected>Choose...</option>
                             <option>Daewoo</option>
                             <option>Sanyo</option>
@@ -94,7 +95,7 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputState">Cantidad</label>
-                        <select name="name[]" class="form-control" id="cantidadProducto">
+                        <select name="name[]" class="form-control form-control-sm" id="cantidadProducto">
                             <option selected>Choose...</option>
                             <option>1</option>
                             <option>2</option>
@@ -128,38 +129,40 @@
         </div>
         <div id="menu2" class="tab-pane fade">
             <h3>Contacto</h3>
-            <div class="form-group">
-                <label for="inputAddress2">Direccion Principal</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-            </div>
-            <div class="form-group">
-                <label for="inputAddress2">Direccion de Contacto</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputCity">Ciudad</label>
-                    <input type="text" class="form-control" id="inputCity">
+            <form class="student-search needs-validation" novalidate>
+                <div class="form-group">
+                    <label for="inputAddress2">Direccion Principal</label>
+                    <input type="text" class="form-control form-control-sm" id="inputAddress2" placeholder="Apartment, studio, or floor" required>
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="inputState">Provincia</label>
-                    <select id="inputState" class="form-control">
+                <div class="form-group">
+                    <label for="inputAddress2">Direccion de Contacto</label>
+                    <input type="text" class="form-control form-control-sm" id="inputAddress2" placeholder="Apartment, studio, or floor" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">Ciudad</label>
+                        <input type="text" class="form-control form-control-sm" id="inputCity" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">Provincia</label>
+                        <select id="inputState" class="form-control form-control-sm" required>
                         <option selected>Choose...</option>
                         <option>pepe</option>
                         <option>pepe2</option>
                         <option>pepe3</option>
                     </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Codigo Postal</label>
+                        <input type="text" class="form-control form-control-sm" id="inputZip" required>
+                    </div>
                 </div>
-                <div class="form-group col-md-2">
-                    <label for="inputZip">Codigo Postal</label>
-                    <input type="text" class="form-control" id="inputZip">
-                </div>
-            </div>
-            <input type="button" class="btn btn-primary" value="Agregar">
+                <button class="btn btn-primary" id="agregarContactoID" type="submit" href="#menu3">Agregar</button>
+            </form>
         </div>
         <div id="menu3" class="tab-pane fade">
             <h3>Productos</h3>
-            <table class="table table-striped">
+            <table class="table table-sm table-striped">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
@@ -169,42 +172,7 @@
                         <th scope="col">Precio</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Lavarropas</td>
-                        <td>Daewoo</td>
-                        <td>1</td>
-                        <td>9500.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Heladera</td>
-                        <td>Sanyo</td>
-                        <td>1</td>
-                        <td>13500.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Televisor Smart TV</td>
-                        <td>Sony</td>
-                        <td>2</td>
-                        <td>32000.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Termotanque</td>
-                        <td>Vulkan</td>
-                        <td>2</td>
-                        <td>13000.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>PlayStation IV</td>
-                        <td>Sony</td>
-                        <td>1</td>
-                        <td>24350.00</td>
-                    </tr>
+                <tbody id="tableBody2">
                 </tbody>
             </table>
         </div>
@@ -218,13 +186,13 @@
         </div>
     </div>
 </div>
-<div class="">
-</div>
+
 <footer class="footer">
     <div class="container">
         <p>© 2019 Copyright: Los Bepi de Sistemas</p>
     </div>
 </footer>
+
 <script src="js/main.js"></script>
 </body>
 
