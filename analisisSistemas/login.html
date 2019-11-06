@@ -65,20 +65,52 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Modal Heading</h4>
+                    <h4 class="modal-title">Crear Cuenta</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    Modal body..
+                        <form class="student-search needs-validation" novalidate>
+                            <div class="form-group">
+                                <label for="inputAddress2">Nombre</label>
+                                <input type="text" class="form-control form-control-sm" id="inputAddress2" placeholder="Nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress2">Apellido</label>
+                                <input type="text" class="form-control form-control-sm" id="inputAddress2" placeholder="Apellido" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress2">Direccion de Mail</label>
+                                <input type="email" class="form-control form-control-sm" id="inputAddress2" placeholder="Email" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputCity">Ciudad</label>
+                                    <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Ciudad" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">Provincia</label>
+                                    <select id="inputState" class="form-control form-control-sm" required>
+                                        <option selected>Choose...</option>
+                                        <option>pepe</option>
+                                        <option>pepe2</option>
+                                        <option>pepe3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="defaultLoginFormGuest">
+                                <label class="custom-control-label" for="defaultLoginFormGuest">Empleado</label>
+                            </div>
+                        </form>
                 </div>
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Confirmar</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                 </div>
-
             </div>
         </div>
     </div>
@@ -90,17 +122,23 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Modal Heading</h4>
+                    <h4 class="modal-title">Olvidaste la Contraseña</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    Modal body..
+                        <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="inputAddress2">Direccion de Mail</label>
+                                    <input type="email" class="form-control form-control-sm" id="inputAddress2" placeholder="Email" required>
+                                </div>
+                            </div>
                 </div>
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Confirmar</button>
                     <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                 </div>
 
