@@ -3,14 +3,10 @@ let modificarProductosID = document.getElementById("modificarProductosId");
 let eliminarProductosID = document.getElementById("eliminarProductosId");
 let confirmarProductosID = document.getElementById("confirmarProductosId");
 let agregarContactoID = document.getElementById("agregarContactoID");
-
+let confirmarId = document.getElementById("confirmarId");
+let registracionId = document.getElementById("registracionId");
+let confirmarReservaId = document.getElementById("confirmarReservaId");
 var names = document.getElementsByName('name[]');
-
-$(onload).carousel({ interval: 3000 });
-
-$('#bs4-slide-carousel').carousel({
-    interval: 3000
-})
 
 var precioProducto = [{ producto: "Lavarropas", precio: 9500, total: 0 },
     { producto: "Heladera", precio: 13500, total: 0 }, { producto: "Televisor Smart TV", precio: 32000, total: 0 },
@@ -40,6 +36,7 @@ const agregarProductos_btn = () => {
     modificarProductosID.removeAttribute('hidden');
     eliminarProductosID.removeAttribute('hidden');
     confirmarProductosID.removeAttribute('hidden');
+    confirmarReservaId.removeAttribute('hidden');
 }
 
 function cargarProductos() {
@@ -50,19 +47,30 @@ function cargarProductos() {
     destination.parentNode.replaceChild(copy, destination);
 }
 
-$('.nav-tabs li').on('click', function() {
+$('.nav flex-column li').on('click', function() {
     var index = $(this).index();
     $('.tab-pane').hide().eq(index).show();
     if (index === 3) cargarProductos();
 });
 
 $('#confirmarProductosId').click(function() {
-    //$('.nav-tabs li').removeClass('active');
-
     $("#menu1").hide();
     $('#contactoTab').tab('show').addClass('active');
     $("#menu2").show();
 });
+
+$('#confirmarId').click(function() {
+    $("#menu3").hide();
+    $('#despachoTab').tab('show').addClass('active');
+    $("#menu4").show();
+});
+
+$('#registracionId').click(function() {
+    $("#menu4").hide();
+    $('#homeTab').tab('show').addClass('active');
+    $("#home").show();
+});
+
 // Upon load..
 window.addEventListener('load', () => {
     // Grab all the forms
